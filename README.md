@@ -25,14 +25,14 @@ This is for Chrome okay? So,
 * node 20_serve-key.js
 * // load the browser http://localhost:8080
 * // Dont click allow yet
-* // Check the console
+* // Check the console for the server, see that it served the public key!
 
 ## Serving the server for receiving the subscription
 
-* node 30-serve-register.js
 * // Keep the page loaded browser http://localhost:8080
+* node 30-serve-register.js
 * // Click allow
-* // Notice this does nothing, it dumps the subscription to the screen
+* // Notice this does nothing in the server, it dumps the subscription to the screen
 * // and asks you to save
 
 ## Run the script that uses the subscription to inform the user device/desktop
