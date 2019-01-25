@@ -17,5 +17,28 @@ This is for Chrome okay? So,
 
 ## Generate your server private and public keys
 
-* node 10_10_prepare_keys.js
+* node 10_prepare_keys.js
 * save the keys in the 15_vapid_keys.json
+
+## Serve the page that is going to create a subscription object
+
+* node 20_serve-key.js
+* // load the browser http://localhost:8080
+* // Dont click allow yet
+* // Check the console
+
+## Serving the server for receiving the subscription
+
+* node 30-serve-register.js
+* // Keep the page loaded browser http://localhost:8080
+* // Click allow
+* // Notice this does nothing, it dumps the subscription to the screen
+* // and asks you to save
+
+## Run the script that uses the subscription to inform the user device/desktop
+
+* // assumes that you have copied the subscription data from the above step
+* // into the 35_config_user_data.json
+* node 40-eventually-notify.js
+* // will delay a bit and send the notification to the subscription service
+* // expect a notification to appear in the desktop
