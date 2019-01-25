@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/taboca/notification-web-push-working-example/issues"
   },
-  "homepage": "https://github.com/taboca/notification-web-push-working-example#readme"
+  "homepage": "https://github.com/taboca/notification-web-push-working-example#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "web-push": "^3.3.3"
+  }
 }
