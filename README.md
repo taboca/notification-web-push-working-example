@@ -29,6 +29,7 @@ This is for Chrome okay? So,
 Within index.js, the first important line is the registration: 
 
 ```
+//https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us
 navigator.serviceWorker.register('service-worker.js');
 ```
 
@@ -44,7 +45,7 @@ navigator.serviceWorker.ready.then(function(registration) {
 }).then(function(subscription) {
 
   // Send the subscription details to the server using the Fetch API.
-  console.log("Something else..");
+  console.log(subscription);
 
 });
 
