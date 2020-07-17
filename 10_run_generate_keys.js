@@ -8,7 +8,7 @@ console.log("Only the public key will be eventually sent to the the client code.
 
 let JSONconfig = webPush.generateVAPIDKeys();
 
-console.log("Copy the following key file config as 15_vapid_keys.json:");
+console.log("Copy the following key file config as 10_data_vapid_keys.json:");
 console.log("----------------");
 console.log(stringify(JSONconfig));
 console.log("----------------");
