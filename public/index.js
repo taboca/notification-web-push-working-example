@@ -1,4 +1,13 @@
 // Register a Service Worker.
+
+// [1] https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us
+
+/* 
+
+According to [1], it's a JavaScript Worker that can't access the DOM. 
+
+*/
+
 navigator.serviceWorker.register('service-worker.js');
 
 navigator.serviceWorker.ready

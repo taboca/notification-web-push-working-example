@@ -17,30 +17,10 @@ This is for Chrome okay? So,
 * Open chrome://serviceworker-internals
 * Open chrome://settings/content/notifications
 
-## Generate your server private and public keys
+## Section 1 - serving an HTML with a JavaScript that installs a service workers
 
-* node 10_prepare_keys.js
-* save the keys in the 15_vapid_keys.json
-
-## Serve the page that is going to create a subscription object
-
-* node 20_serve-key.js
-* // load the browser http://localhost:8080
-* // Dont click allow yet
-* // Check the console for the server, see that it served the public key!
-
-## Serving the server for receiving the subscription
-
-* // Keep the page loaded browser http://localhost:8080
-* node 30-serve-register.js
-* // Click allow
-* // Notice this does nothing in the server, it dumps the subscription to the screen
-* // and asks you to save
-
-## Run the script that uses the subscription to inform the user device/desktop
-
-* // assumes that you have copied the subscription data from the above step
-* // into the 35_config_user_data.json
-* node 40-eventually-notify.js
-* // will delay a bit and send the notification to the subscription service
-* // expect a notification to appear in the desktop
+* Documentation https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us 
+* The index.html links to index.js
+* index.js will register the service worker from "service-worker.js"
+* This service worker will be registered and executed as a JavaScript worker, meaning that it won't access the page's DOM. https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us 
+* 
