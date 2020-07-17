@@ -23,4 +23,29 @@ This is for Chrome okay? So,
 * The index.html links to index.js
 * index.js will register the service worker from "service-worker.js"
 * This service worker will be registered and executed as a JavaScript worker, meaning that it won't access the page's DOM. https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us 
-* 
+
+### The service worker lifecycle
+
+Within index.js, the first important line is the registration: 
+
+```
+navigator.serviceWorker.register('service-worker.js');
+```
+
+Next, we will dump a few lines to the console to help you understand about this service worker lifecycle: 
+
+```
+
+navigator.serviceWorker.ready.then(function(registration) {
+
+  // Use the PushManager to get the user's subscription to the push service.
+  console.log("This worker is running...")
+
+}).then(function(subscription) {
+
+  // Send the subscription details to the server using the Fetch API.
+  console.log("Something else..");
+
+});
+
+```
