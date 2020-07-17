@@ -33,11 +33,14 @@ Within index.js, the first important line is the registration:
 navigator.serviceWorker.register('service-worker.js');
 ```
 
-Next, we will dump a few lines to the console to help you understand about this service worker lifecycle: 
+Next, we will inform the console when the service worker is ready: 
 
 ```
 navigator.serviceWorker.ready.then(function(registration) {
   console.log("This worker is running...")
 });
+
+Read more about the service worker lifecycle and premises — //https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us
+. 
 
 ```
