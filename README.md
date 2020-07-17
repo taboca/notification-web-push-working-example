@@ -24,7 +24,7 @@ This is for Chrome okay? So,
 * index.js will register the service worker from "service-worker.js"
 * This service worker will be registered and executed as a JavaScript worker, meaning that it won't access the page's DOM. https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us 
 
-### The service worker lifecycle
+### Registering a service worker 
 
 Within index.js, the first important line is the registration: 
 
