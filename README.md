@@ -36,17 +36,8 @@ navigator.serviceWorker.register('service-worker.js');
 Next, we will dump a few lines to the console to help you understand about this service worker lifecycle: 
 
 ```
-
 navigator.serviceWorker.ready.then(function(registration) {
-
-  // Use the PushManager to get the user's subscription to the push service.
   console.log("This worker is running...")
-
-}).then(function(subscription) {
-
-  // Send the subscription details to the server using the Fetch API.
-  console.log(subscription);
-
 });
 
 ```
