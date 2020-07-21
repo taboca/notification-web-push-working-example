@@ -14,6 +14,7 @@ app.get('/test/vapidPublicKey', function(req, res) {
   console.log("MANUAL INTERVENTION - stop this script and run 30-serve-register!")
 });
 
+// This will serve the index.html and the index.js which registers the service-worker.js
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.listen(8080);
