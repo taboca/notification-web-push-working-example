@@ -44,3 +44,9 @@ Read more about the service worker lifecycle and premises — //https://develope
 . 
 
 ```
+
+### Running the server 
+
+```
+node 20-server-worker.js
+```
