@@ -51,3 +51,9 @@ Read more about the service worker lifecycle and premises — //https://develope
 node ./10_run_generate_keys.js
 ```
 
+Save the output of the above script to a the following file: 
+
+```
+./10_data_vapid_keys.json
+```
+
