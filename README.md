@@ -44,3 +44,10 @@ Read more about the service worker lifecycle and premises — //https://develope
 . 
 
 ```
+
+### Generating a key 
+
+```
+node ./10_run_generate_keys.js
+```
+
