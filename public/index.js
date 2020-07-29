@@ -6,6 +6,7 @@
 According to [1], it's a JavaScript Worker that can't access the DOM. 
 */
 
+console.log("Registering the service-worker.js");
 navigator.serviceWorker.register('service-worker.js');
 
 navigator.serviceWorker.ready
