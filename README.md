@@ -44,3 +44,16 @@ Read more about the service worker lifecycle and premises — //https://develope
 . 
 
 ```
+
+### Generating a key 
+
+```
+node ./10_run_generate_keys.js
+```
+
+This script will save a file with the public and private keys: 
+
+```
+./10_data_vapid_keys.json
+```
+
