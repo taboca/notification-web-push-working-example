@@ -77,5 +77,13 @@ This script will save a file with the public and private keys:
 ./10_data_vapid_keys.json
 ```
 
-### Section 4 - serving the worker that fetches the key 
+### Section 4 - worker that requests a popup to ask user's permission 
 
+* User is exposed to interaction related to the *notifications* experience. 
+* The browser will a) ask for permission or not, depending on the notification settings that can be verified using the chrome://settings/content/siteDetails?site=http%3A%2F%2Flocalhost%3A8080 with Chrome. 
+* These settings can be: Ask, Allow, or Block. 
+
+* At this point, if nothing related to this site was already set, then as the user loads the page "http://localhost:8080", they should expect to see a popup that will ask permission; simply because the default setting is Ask.  
+
+* If the user simply dismisses, marking the [x] button — If the user dismisses the pop up too many times, the browser will automatically block — the same as in choosing [Block] — this is the message that Google Chrome informs in this condition: "Notifications permission has been blocked as the user has dismissed the permission prompt several times. This can be reset in Page Info which can be accessed by clicking the lock icon next to the URL. See https://www.chromestatus.com/features/6443143280984064 for more information" 
+ 
