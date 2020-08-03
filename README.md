@@ -10,12 +10,24 @@ This sample was based in the [Mozilla sample](https://serviceworke.rs/push-simpl
 
 However, here I wanted to be more clear because the Mozilla and Google is confusing for starters. Check my [video walking with you](http://youtu.be/bu80mpG-Pn8) and try yourself!
 
-## Get started
+# notification-web-push-working-example
 
-This is for Chrome okay? So,
+* Node 8.6+
+* Packages express, body-parser for the server
+* Package web-push for easier works with the Web Push infrastructure, based in the https://serviceworke.rs/push-simple_demo.html Mozilla stuff
 
-* Open chrome://serviceworker-internals
-* Open chrome://settings/content/notifications
+## Introduction
+
+This sample was based in the [Mozilla sample](https://serviceworke.rs/push-simple_demo.html) and also the Google document [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/push-notifications).
+
+However, here I wanted to be more clear because the Mozilla and Google is confusing for starters. Check my [video walking with you](http://youtu.be/bu80mpG-Pn8) and try yourself!
+
+## Section 0 — get started
+
+This material was tested with Chrome browser. 
+
+* Open chrome://serviceworker-internals — make sure to remove any worker related to the localhost:8080
+* Open chrome://settings/content/notifications - make sure that you clear settings if you have prior settings related to the localhost:8080
 
 ## Section 1 - serving an HTML with a JavaScript that installs a service workers
 
@@ -24,7 +36,7 @@ This is for Chrome okay? So,
 * index.js will register the service worker from "service-worker.js"
 * This service worker will be registered and executed as a JavaScript worker, meaning that it won't access the page's DOM. https://developers.google.com/web/fundamentals/primers/service-workers?hl=en-us 
 
-### Registering a service worker 
+### Section 1.10 — Registering a service worker 
 
 Within index.js, the first important line is the registration: 
 
@@ -45,7 +57,15 @@ Read more about the service worker lifecycle and premises — //https://develope
 
 ```
 
-### Generating a key 
+### Section 2 — running the server 
+
+```
+node 20-server-worker.js
+```
+
+#### Section 2.10 — looking at the console
+
+### Section 3 — generating a key 
 
 ```
 node ./10_run_generate_keys.js
@@ -56,4 +76,6 @@ This script will save a file with the public and private keys:
 ```
 ./10_data_vapid_keys.json
 ```
+
+### Section 4 - serving the worker that fetches the key 
 
