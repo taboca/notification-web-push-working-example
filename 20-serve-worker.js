@@ -7,4 +7,5 @@ app.use(bodyParser.json());
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+console.log("Localhost serving at http://localhost:8080");
 app.listen(8080);
